@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: "Login to Docker hub"
-        run: docker login --username mohamedadel40 --password dckr_pat_gNvVTDb2ApNCMRLAP3MgYfDTVZ8
+        run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_TOKEN}} 
 
       # - name: "Bulding docker image"
       #   run: docker build -t mohamedadel40 /myimage

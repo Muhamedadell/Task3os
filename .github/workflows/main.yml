@@ -17,6 +17,7 @@ jobs:
 
       - name: "Bulding docker image"
         run: docker build -t ${{ secrets.DOCKER_USERNAME }} /dockerhrapp .
-
-      # - name: "Pushing to Docker hub"
-      #   run: docker push ${{ secrets.DOCKER_USERNAME }} /dockerhrapp .
+        run: docker run -d -p 8888:80 --name  ${{ secrets.DOCKER_USERNAME }} /hrapp dockerhrapp .
+      
+      - name: "Pushing to Docker hub"
+        run: docker push ${{ secrets.DOCKER_USERNAME }} /hrapp dockerhrapp .

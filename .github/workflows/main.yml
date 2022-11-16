@@ -17,7 +17,7 @@ jobs:
         run: docker login --username ${{ secrets.DOCKER_USERNAME }} --password ${{ secrets.DOCKER_TOKEN}} 
 
       - name: "Bulding docker image"
-        run: docker  build --tag  ${{ secrets.DOCKER_USERNAME }}/dockerhrapp .
+        run: docker  build --tag  ${{ secrets.DOCKER_USERNAME }}/hrapp .
       
       - name: "Pushing to Docker hub"
-        run: docker push  ${{ secrets.DOCKER_USERNAME }}/dockerhrapp .
+        run: docker push  ${{ secrets.DOCKER_USERNAME }}/hrapp .

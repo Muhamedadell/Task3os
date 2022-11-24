@@ -18,6 +18,6 @@ jobs:
       - name: "Bulding docker image"
         run: docker  build -t  ${{ secrets.DOCKER_USERNAME }}/dotnetimg:3.2 .
       
-      - name: "Pushing to Docker hub"
-        run: docker push  ${{ secrets.DOCKER_USERNAME }}/dotnetimg:3.2 
+      # - name: "Pushing to Docker hub"
+      #   run: docker push  ${{ secrets.DOCKER_USERNAME }}/dotnetimg:3.2 
 
